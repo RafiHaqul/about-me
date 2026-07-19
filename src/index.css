@@ -1,0 +1,66 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-paper text-ink font-body antialiased;
+}
+
+/* Reusable "// 0N — Label" section eyebrow, echoing a code comment */
+.eyebrow {
+  @apply font-mono text-xs tracking-wide text-box uppercase mb-3 flex items-center gap-2;
+}
+
+.eyebrow::before {
+  content: '//';
+  @apply text-muted;
+}
+
+/* Bounding-box corner bracket motif, used once as the hero's signature element */
+.bbox-frame {
+  position: relative;
+}
+
+.bbox-frame::before,
+.bbox-frame::after,
+.bbox-frame>.corner-tl,
+.bbox-frame>.corner-br {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-color: #3452ff;
+  border-style: solid;
+}
+
+.bbox-frame::before {
+  top: -10px;
+  left: -10px;
+  border-width: 2px 0 0 2px;
+}
+
+.bbox-frame::after {
+  bottom: -10px;
+  right: -10px;
+  border-width: 0 2px 2px 0;
+}
+
+.tag-chip {
+  @apply font-mono text-[11px] uppercase tracking-wide px-2 py-1 rounded border border-line text-muted bg-panel;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
