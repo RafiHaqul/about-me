@@ -1,4 +1,4 @@
-# Portofolio — Full-Stack & Computer Vision Engineer
+# Web Portofolio
 
 React + React Router v6, styling Tailwind CSS, konten dinamis dari Google Sheets (CSV).
 
