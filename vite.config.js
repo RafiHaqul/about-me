@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: true, // atau isi dengan IP spesifik Anda, misal: '192.168.1.100'
+    base: "https://rafihaqul.github.io/about-me"
   }
 
 })
