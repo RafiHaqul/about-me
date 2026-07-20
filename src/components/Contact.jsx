@@ -5,7 +5,7 @@ export default function Contact() {
         {/* <p className="terminal-eyebrow mb-3 justify-center inline-flex">curl contact --send</p> */}
         <h2 className="font-display font-bold text-3xl mb-4">Mari Berdiskusi</h2>
         <p className="text-muted max-w-xl mx-auto mb-8">
-          Terbuka untuk bekerjasama ataupun berdiskusi.
+          Saya terbuka untuk bekerjasama ataupun berdiskusi.
         </p>
         <div className="flex flex-wrap justify-center gap-4 font-mono text-sm">
           <a
