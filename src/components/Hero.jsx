@@ -1,4 +1,5 @@
 import heroImage from '../assets/pp.webp'
+import bgImage from '../assets/bg-hero.webp'
 
 export default function Hero() {
   return (
@@ -28,8 +29,7 @@ export default function Hero() {
           </div>
 
           <p className="mt-6 text-lg text-muted max-w-xl">
-            Lulusan S1 Informatika dengan pengalaman di bidang {' '}
-            <span className="text-ink font-medium">Data Processing, Mechine Learning/Deep Learning, Web Development </span>{' '}
+            <span className="text-ink font-medium">AI/ML Engineer, Data Processing,</span>{' '}
             dan{' '}
             <span className="text-ink font-medium">Computer Vision</span>.
           </p>
@@ -58,7 +58,7 @@ export default function Hero() {
           </div>
         </div>
 
-        
+
       </div>
     </section>
   )

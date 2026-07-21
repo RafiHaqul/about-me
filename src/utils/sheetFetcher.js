@@ -12,6 +12,8 @@ import Papa from 'papaparse'
  * Setiap sheet/tab butuh URL publish terpisah.
  */
 export const SHEET_URLS = {
+  profile:
+    'https://docs.google.com/spreadsheets/d/e/2PACX-1vQYixwy6r30kgV7BHjKnU-CtOyfEFDtYN-My8A02x2sck3paLkQZPZSRWdkdCnKjaLF9lLQCAMV4DMa/pub?gid=491793933&single=true&output=csv',
   skills:
     'https://docs.google.com/spreadsheets/d/e/2PACX-1vQYixwy6r30kgV7BHjKnU-CtOyfEFDtYN-My8A02x2sck3paLkQZPZSRWdkdCnKjaLF9lLQCAMV4DMa/pub?gid=1093106571&single=true&output=csv',
   projects:

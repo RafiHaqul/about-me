@@ -1,4 +1,18 @@
+import { SHEET_URLS } from '../utils/sheetFetcher.js'
+import { useSheetData } from '../utils/useSheetData.js'
+
+/**
+ * Struktur kolom Google Sheets yang diharapkan (baris pertama = header):
+ * Kategori | Skill
+ *
+ * Contoh baris:
+ * Profile   | 
+ * lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.
+ */
+
 export default function About() {
+  const { data, isLoading, isError, errorMessage } = useSheetData(SHEET_URLS.profile)
+
   return (
     <section id="about" className="px-6 py-24 border-t border-line">
       <div className="max-w-6xl mx-auto grid md:grid-cols-[0.4fr_0.6fr] gap-12">
@@ -8,21 +22,26 @@ export default function About() {
         </div>
 
         <div className="text-muted leading-relaxed space-y-4 text-base md:text-lg">
-          <p>
-            Saya mahasiswa tingkat akhir Informatika dengan jalur minat di bidang informatika 
-            seperti <strong className="text-ink">Web Developer</strong>{' '}
-            untuk membangun aplikasi web yang functional, dan{' '}
-            <strong className="text-ink">Data Processing atau AI/ML Engineer</strong> untuk
-            mengembangkan algoritma prediktif dan otomasi sistem yang mampu mengolah 
-            data kompleks menjadi solusi cerdas yang efisien.
-          </p>
-          <p>
-            Ketertarikan utama saya adalah bagaimana sebuah data dapat diolah menjadi 
-            informasi yang berguna, dan bagaimana informasi itu dapat disajikan dalam 
-            bentuk aplikasi yang dapat digunakan oleh orang lain. 
-            Kombinasi antara kemampuan teknis dan pemahaman mendalam tentang data 
-            adalah kunci untuk menciptakan solusi yang inovatif dan berdampak.
-          </p>
+          {isLoading && (
+            <div className="font-mono text-sm text-muted flex items-center gap-3">
+              <span className="w-3 h-3 rounded-full bg-accent animate-ping" />
+              Mengambil data proyek dari Google Sheets...
+            </div>
+          )}
+
+          {isError && !isLoading && (
+            <div className="font-mono text-sm text-red-600 border border-red-200 bg-red-50 rounded-md p-4">
+              Gagal memuat data proyek: {errorMessage}
+            </div>
+          )}
+
+          {!isLoading && !isError && (
+            <div className="space-y-4">
+              {data.map((row, index) => (
+                <p key={index}>{row.About_Me}</p>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </section>
