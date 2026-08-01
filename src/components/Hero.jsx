@@ -1,5 +1,4 @@
 import heroImage from '../assets/pp.webp'
-import bgImage from '../assets/bg-hero.webp'
 
 export default function Hero() {
   return (
