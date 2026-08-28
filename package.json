@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "cp dist/index.html dist/404.html",
+    "postbuild": "mkdir -p dist/about-me && cp dist/index.html dist/about-me/index.html && cp dist/index.html dist/404.html",
     "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "vite build && gh-pages -d dist"

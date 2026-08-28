@@ -4,8 +4,21 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
 import './App.css'
 
-if (window.location.pathname === '/') {
-  window.location.replace(`/about-me/${window.location.hash}`)
+const isProductionDomain = ['rafihaqul.my.id', 'www.rafihaqul.my.id'].includes(
+  window.location.hostname,
+)
+
+if (isProductionDomain) {
+  const targetPath = '/about-me/'
+  const isApexDomain = window.location.hostname === 'rafihaqul.my.id'
+  const isRootPath = window.location.pathname === '/'
+  const isAboutMePath = window.location.pathname === '/about-me'
+
+  if (isApexDomain || isRootPath || isAboutMePath) {
+    window.location.replace(
+      `https://www.rafihaqul.my.id${targetPath}${window.location.search}${window.location.hash}`,
+    )
+  }
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(
