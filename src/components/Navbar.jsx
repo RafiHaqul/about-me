@@ -58,7 +58,9 @@ export default function Navbar() {
           onClick={(e) => handleNavClick(e, 'hero')}
           className="font-display font-semibold text-ink tracking-tight"
         >
-          RafiHaqul
+          <span className="text-accent">&lt;</span>
+          AboutMe
+          <span className="text-accent">/&gt;</span>
         </a>
 
         <ul className="hidden md:flex items-center gap-7 font-mono text-xs uppercase tracking-wide text-muted">

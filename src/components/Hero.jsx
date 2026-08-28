@@ -28,9 +28,7 @@ export default function Hero() {
           </div>
 
           <p className="mt-6 text-lg text-muted max-w-xl">
-            <span className="text-ink font-medium">AI/ML Engineer, Data Processing,</span>{' '}
-            dan{' '}
-            <span className="text-ink font-medium">Computer Vision</span>.
+            Data processing, AI/ML Engineer, Computer Vision, n8n Automation
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">

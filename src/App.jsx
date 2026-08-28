@@ -2,7 +2,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import Navbar from './components/Navbar.jsx'
 import HomePage from './pages/HomePage.jsx'
-import ProjectDetailPage from './pages/ProjectDetailPage.jsx'
+// import ProjectDetailPage from './pages/ProjectDetailPage.jsx'
 
 /**
  * React Router TIDAK mereset scroll position secara otomatis saat
@@ -28,12 +28,12 @@ function ScrollManager() {
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-paper">
+    <div className="min-h-screen  bg-panel">
       <ScrollManager />
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/project/:id" element={<ProjectDetailPage />} />
+        {/* <Route path="/project/:id" element={<ProjectDetailPage />} /> */}
         <Route
           path="*"
           element={

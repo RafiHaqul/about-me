@@ -10,6 +10,8 @@ export default {
         ink: '#14181B',
         muted: '#5B6572',
         line: '#DADFE3',
+        accent: '#3B82F6',
+        detect: '#10B981',
         // annotation-blue: the color CV tools draw bounding boxes in
         box: '#3452FF',
         'box-soft': '#EAEEFF',

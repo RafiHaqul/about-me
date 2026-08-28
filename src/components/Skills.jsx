@@ -29,7 +29,7 @@ export default function Skills() {
   return (
     <section id="skills" className="px-6 py-24 border-t border-line bg-panel">
       <div className="max-w-6xl mx-auto">
-        {/* <p className="terminal-eyebrow mb-3">ls skills/</p> */}
+        <p className="terminal-eyebrow mb-3">ls skills/</p>
         <h2 className="font-display font-bold text-3xl mb-10">Keahlian</h2>
 
         {isLoading && (

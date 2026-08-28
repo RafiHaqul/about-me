@@ -8,11 +8,12 @@ import { useSheetData } from '../utils/useSheetData.js'
  */
 export default function ProjectsGrid() {
   const { data, isLoading, isError, errorMessage } = useSheetData(SHEET_URLS.projects)
+  // console.log('ProjectsGrid data:', data) // Debugging: log data yang diterima dari Google Sheets 
 
   return (
     <section id="projects" className="px-6 py-24 border-t border-line">
       <div className="max-w-6xl mx-auto">
-        {/* <p className="terminal-eyebrow mb-3">ls projects/ -l</p> */}
+        <p className="terminal-eyebrow mb-3">ls projects/ -l</p>
         <h2 className="font-display font-bold text-3xl mb-10">Proyek</h2>
 
         {isLoading && (
@@ -46,7 +47,7 @@ export default function ProjectsGrid() {
                 </p>
 
                 <div className="flex flex-wrap gap-1.5 mb-5">
-                  {(project['Tech Stack'] || '')
+                  {(project.Tech_Stack || '')
                     .split(',')
                     .filter(Boolean)
                     .map((tech) => (
@@ -60,10 +61,10 @@ export default function ProjectsGrid() {
                 </div>
 
                 <Link
-                  to={`/project/${project.ID}`}
+                  to={project.Link}
                   className="font-mono text-sm text-accent hover:underline self-start"
                 >
-                  Baca Selengkapnya →
+                  Selengkapnya →
                 </Link>
               </article>
             ))}

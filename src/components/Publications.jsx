@@ -20,7 +20,7 @@ export default function Publications() {
   return (
     <section id="publications" className="px-6 py-24 border-t border-line bg-panel">
       <div className="max-w-6xl mx-auto">
-        {/* <p className="terminal-eyebrow mb-3">cat publications.bib</p> */}
+        <p className="terminal-eyebrow mb-3">cat publications.bib</p>
         <h2 className="font-display font-bold text-3xl mb-10">Publikasi</h2>
 
         <ul className="space-y-6">

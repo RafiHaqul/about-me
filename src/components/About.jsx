@@ -17,11 +17,11 @@ export default function About() {
     <section id="about" className="px-6 py-24 border-t border-line">
       <div className="max-w-6xl mx-auto grid md:grid-cols-[0.4fr_0.6fr] gap-12">
         <div>
-          {/* <p className="terminal-eyebrow mb-3">cat about.md</p> */}
+          <p className="terminal-eyebrow mb-3">cat about.md</p>
           <h2 className="font-display font-bold text-3xl">Tentang Saya</h2>
         </div>
 
-        <div className="text-muted leading-relaxed space-y-4 text-base md:text-lg">
+        <div className=" leading-relaxed space-y-4 text-base md:text-lg">
           {isLoading && (
             <div className="font-mono text-sm text-muted flex items-center gap-3">
               <span className="w-3 h-3 rounded-full bg-accent animate-ping" />
