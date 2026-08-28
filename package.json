@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://afihaqul.my.id",
+  "homepage": "https://www.rafihaqul.my.id",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
