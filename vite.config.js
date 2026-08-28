@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/about-me/',
+  base: '/',
   server: {
     host: true, // atau isi dengan IP spesifik Anda, misal: '192.168.1.100'
   }
