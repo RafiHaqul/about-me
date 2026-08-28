@@ -16,7 +16,7 @@ if (isProductionDomain) {
 
   if (isApexDomain || isRootPath || isAboutMePath) {
     window.location.replace(
-      `https://www.rafihaqul.my.id${targetPath}${window.location.search}${window.location.hash}`,
+      `https://rafihaqul.github.io${targetPath}${window.location.search}${window.location.hash}`,
     )
   }
 }
